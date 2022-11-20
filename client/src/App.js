@@ -2,7 +2,7 @@ import './App.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import PostsList from './components/PostsList';
+import PostsList from './components/PostList';
 import PostDetails from './components/PostDetails';
 import Header from './components/Header';
 import Home from './components/Home';
