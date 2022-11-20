@@ -1,4 +1,4 @@
-import * as types from '../actions/types';
+import * as types from "../actions/post.type";
 
 const initialState = {
   posts: [],
@@ -66,7 +66,7 @@ const postReducer = (state = initialState, action) => {
     case types.DELETE_POST_SUCCESS:
       return {
         ...state,
-        posts: state.posts.filter(post => post._id !== action.payload),
+        posts: state.posts.filter((post) => post._id !== action.payload),
         currentPost: null,
         loading: false,
       };
@@ -83,7 +83,7 @@ const postReducer = (state = initialState, action) => {
     case types.UPDATE_POST_SUCCESS:
       return {
         ...state,
-        posts: state.posts.map(post => {
+        posts: state.posts.map((post) => {
           post._id === action.payload._id ? action.payload : post;
         }),
         currentPost: action.payload,

@@ -1,4 +1,4 @@
-import * as types from './types';
+import * as types from './post.type';
 import * as api from '../../api';
 
 export const fetchPosts = () => async dispatch => {
