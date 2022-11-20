@@ -1,13 +1,20 @@
-import express from "express";
-import cors from "cors";
+const express = require("express");
+const cors = require("cors");
 require("dotenv").config();
-const PORT = process.env.PORT || 8000;
+const postRoutes = require("./routes/posts.route");
+const { connection } = require("./config/db");
 
 const app = express();
-dotenv.config();
+const PORT = process.env.PORT || 8000;
 
 app.use(cors());
 app.use(express.json({ limit: "30mb", extended: true }));
+app.use(
+  express.urlencoded({
+    limit: "30mb",
+    extended: true,
+  })
+);
 
 app.get("/", (req, res) => {
   res.json({
@@ -15,6 +22,8 @@ app.get("/", (req, res) => {
     message: "Hello, Welcome to Blog App!",
   });
 });
+
+app.use("/posts", postRoutes);
 
 app.listen(PORT, async () => {
   try {

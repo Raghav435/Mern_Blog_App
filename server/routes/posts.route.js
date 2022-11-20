@@ -1,14 +1,14 @@
-import express from "express";
-import {
+const {
+  createPost,
+  deletePost,
   getPosts,
   getSinglePost,
-  createPost,
   updatePost,
-  deletePost,
-} from "../controllers/posts.controller";
+}= require("../controllers/posts.controller");
+
+const express = require("express");
 
 const router = express.Router();
-
 
 // GET, POST, DELETE, PUT, PATCH
 
@@ -18,4 +18,4 @@ router.post("/", createPost);
 router.patch("/:id", updatePost);
 router.delete("/:id", deletePost);
 
-export default router;
+module.exports = router;
