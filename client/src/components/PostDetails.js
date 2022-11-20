@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchSinglePost, deletePost } from '../redux/actions/post';
+import { fetchSinglePost, deletePost } from '../redux/actions/post.action';
 import { useParams } from 'react-router';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';

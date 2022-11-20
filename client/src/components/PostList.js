@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Post from './Post';
-import { fetchPosts } from '../redux/actions/post';
+import { fetchPosts } from '../redux/actions/post.action';
 import Loader from './Loader';
 import { useColorModeValue, Box, Wrap, Flex } from '@chakra-ui/react';
 

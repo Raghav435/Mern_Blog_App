@@ -18,7 +18,7 @@ import { Button } from '@chakra-ui/button';
 import { Input } from '@chakra-ui/input';
 import { FormControl, FormLabel } from '@chakra-ui/form-control';
 
-import { createPost } from '../redux/actions/post';
+import { createPost } from '../redux/actions/post.action';
 
 const categories = ['Frontend', 'Backend', 'Mobile', 'React', 'Vue', 'JavaScript', 'Fun', 'Gaming'];
 
