@@ -84,7 +84,7 @@ const postReducer = (state = initialState, action) => {
       return {
         ...state,
         posts: state.posts.map((post) => {
-          post._id === action.payload._id ? action.payload : post;
+          post._id === action.payload._id ? action.payload : post
         }),
         currentPost: action.payload,
         loading: false,
