@@ -83,8 +83,8 @@ const postReducer = (state = initialState, action) => {
     case types.UPDATE_POST_SUCCESS:
       return {
         ...state,
-        posts: state.posts.map((post) => {
-          post._id === action.payload._id ? action.payload : post
+        posts: state.posts.map(post => {
+          post._id == action.payload._id ? action.payload : post;
         }),
         currentPost: action.payload,
         loading: false,
